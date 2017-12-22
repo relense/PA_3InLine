@@ -1,0 +1,36 @@
+
+.root{
+    -fx-background-image: url("halloweenBackgound.jpg"); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+
+}
+
+.button{
+
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-border-color: transparent;
+    -fx-text-fill:white;
+    -fx-font-weight:bold;
+
+}
+.button:hover {
+
+    -fx-text-fill: yellow;
+    -fx-underline: true;
+    -fx-font-weight:bold;
+}
+#hbox{
+    
+    
+    -fx-font-weight:bold;
+
+}
+
+#txt{
+-fx-text-fill: white;
+}
+
+

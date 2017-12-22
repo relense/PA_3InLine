@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Main.Creditos.FXMLCreditsController">
+   <bottom>
+      <Button fx:id="backButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickAction" text="Back" BorderPane.alignment="BASELINE_CENTER">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </bottom>
+   <center>
+      <TextArea fx:id="textArea" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="450.0" text="O jogo foi desenvolvido no âmbito da UC de Programação Avançada&#10;a pedido dos docente José Pereira e Patricia Macedo e implementados&#10;pelos alunos Miguel Furtado 120221006 e Tiago Monteiro 140221001&#10;do Instituto Politecnico de Setúbal da Escola Superior de Tecnologias." BorderPane.alignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextArea>
+   </center>
+   <top>
+      <Label fx:id="labelCredits" text="Creditos" BorderPane.alignment="TOP_CENTER">
+         <font>
+            <Font size="37.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>

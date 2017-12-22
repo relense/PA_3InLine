@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Main.Historico.FXMLHistoricoController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region minHeight="50.0" minWidth="200.0" />
+            <HBox alignment="CENTER">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <ListView fx:id="listView" prefHeight="384.0" prefWidth="79.0" HBox.hgrow="ALWAYS" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <TableView fx:id="tabel" prefHeight="355.0" prefWidth="554.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="98.0" text="ID" />
+                      <TableColumn fx:id="pontuacao" prefWidth="203.0" text="Pontuacao" />
+                        <TableColumn fx:id="tempo" prefWidth="124.0" text="Tempo" />
+                        <TableColumn fx:id="tema" prefWidth="128.0" text="Tema" />
+                    </columns>
+                  </TableView>
+                  <Region HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#goBack" text="back">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Button>
+            <Region VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

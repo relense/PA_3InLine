@@ -1,0 +1,33 @@
+
+.root{
+    -fx-background-image: url("smileBackgound.jpg"); 
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+
+}
+
+.button{
+ 
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-border-color: transparent;
+    -fx-size: 40px;
+    -fx-text-fill:gray;
+    -fx-font-weight:bold;
+
+}
+.button:hover {
+
+    -fx-text-fill: yellow;
+    -fx-underline: true;
+    -fx-font-weight:bold;
+}
+#hbox{
+    -fx-text-fill: #848484;
+    -fx-color:white;
+    -fx-font-weight:bold;
+    -fx-border-radius:6px;
+}
+
+

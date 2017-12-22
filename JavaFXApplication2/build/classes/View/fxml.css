@@ -1,0 +1,12 @@
+
+
+.panel{
+    -fx-background-image: url("img.jpg"); 
+    -fx-background-repeat: no-repeat;
+  
+    -fx-background-size: cover;
+ 
+
+}
+
+

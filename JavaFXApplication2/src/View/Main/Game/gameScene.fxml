@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.Main.Game.GameSceneController">
+   <left>
+      <VBox fx:id="VBoxProximasPecas" prefHeight="200.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Proximas pecas" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox fx:id="vBoxUndo" alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="100.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="undoButton" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" text="Undo">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="homeButton" alignment="CENTER" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#goBack" text="Home">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <top>
+      <HBox fx:id="VBoxStats" prefHeight="38.0" prefWidth="600.0" visible="false" BorderPane.alignment="CENTER">
+         <children>
+            <Text id="txt" fx:id="txt1" strokeType="OUTSIDE" strokeWidth="0.0" text="Jogador: ">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </HBox.margin>
+            </Text>
+            <Text id="txt" fx:id="playerName" strokeType="OUTSIDE" strokeWidth="0.0" text="nome">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Text>
+            <Region prefHeight="100.0" prefWidth="78.0" HBox.hgrow="ALWAYS" />
+            <Text id="txt" fx:id="txt2" strokeType="OUTSIDE" strokeWidth="0.0" text="Pontuacao: ">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" top="10.0" />
+               </HBox.margin>
+            </Text>
+            <Text id="txt" fx:id="score" layoutX="541.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="pontos">
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Text>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Text id="txt" fx:id="time" strokeType="OUTSIDE" strokeWidth="0.0" text="tempo">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <StackPane fx:id="StackPaneCriarJogo" prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="VboxTabuleiro" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <HBox fx:id="hBoxLinha1" prefHeight="35.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+                  <HBox fx:id="hBoxLinha2" prefHeight="35.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+                  <HBox fx:id="hBoxLinha3" prefHeight="35.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+                  <HBox fx:id="hBoxLinha4" prefHeight="35.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+                  <HBox fx:id="hBoxLinha5" prefHeight="35.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+                  <HBox fx:id="hBoxLinha6" prefHeight="35.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+                  <HBox fx:id="hBoxLinha7" prefHeight="35.0" prefWidth="400.0" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+            <VBox fx:id="VboxInicio" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <TextField fx:id="textNomeJogador" alignment="CENTER" maxHeight="35.0" maxWidth="130.0" minHeight="5.0" minWidth="10.0" prefHeight="35.0" prefWidth="130.0" promptText="Nome do jogador">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ComboBox fx:id="comboTipoJogo" editable="true" prefWidth="150.0" promptText="Tipo de Jogo">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="comboTipoPontuação" editable="true" prefWidth="150.0" promptText="Tipo de Pontuação">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <ComboBox fx:id="comboTema" prefWidth="150.0" promptText="Tema">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="BotaoValidar" mnemonicParsing="false" onAction="#botaoValidarClick" text="Validar" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox fx:id="vBoxFimJogo" alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <HBox alignment="BOTTOM_CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#novoJogo" text="Novo Jogo">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#goBack" text="Menu">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
